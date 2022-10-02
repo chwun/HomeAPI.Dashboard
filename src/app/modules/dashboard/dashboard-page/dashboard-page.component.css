@@ -1,0 +1,29 @@
+div.container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  color: white;
+  height: 100%;
+}
+
+div.pageHeader {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgb(96, 125, 139);
+}
+
+div.pageContent {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  background-color: rgb(48, 48, 48);
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}

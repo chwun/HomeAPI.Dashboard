@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="pageHeader">
+    <h1>{{ page?.title ?? '' }}</h1>
+  </div>
+
+  <div class="pageContent" *ngIf="page; else pageNotFound">
+    <app-dashboard-group
+      *ngFor="let group of page.groups"
+      [group]="group"></app-dashboard-group>
+  </div>
+
+  <ng-template #pageNotFound>
+    <div class="pageContent">dashboard page not found!</div>
+  </ng-template>
+</div>

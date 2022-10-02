@@ -1,0 +1,18 @@
+div.group {
+  background-color: rgb(66, 66, 66);
+  padding: 0.5rem;
+  width: 300px;
+}
+
+div.groupTitle {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  min-height: 32px;
+  border-bottom: 2px solid rgb(48, 48, 48);
+  padding-bottom: 5px;
+}
+
+div.groupTitle>span.title {
+  margin-left: 0.4rem;
+}
