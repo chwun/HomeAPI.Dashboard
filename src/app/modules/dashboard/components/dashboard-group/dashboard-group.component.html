@@ -7,9 +7,13 @@
   </div>
 
   <div class="groupContent">
-    <br />
-    <br />
-    <br />
-    <br />
+    <div class="widgets">
+      <app-dashboard-widget-host
+        class="widget"
+        *ngFor="let widget of group.widgets"
+        [widgetData]="undefined"
+        [widgetType]="widget.type">
+      </app-dashboard-widget-host>
+    </div>
   </div>
 </div>

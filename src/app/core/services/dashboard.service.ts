@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { DashboardPage } from '../models/dashboard-page';
+import { DashboardWidgetDatasource } from '../models/dashboard-widget-datasource';
+import { DashboardWidgetType } from '../models/dashboard-widget-type';
 
 @Injectable({
   providedIn: 'root',
@@ -16,16 +18,92 @@ export class DashboardService {
           id: 1,
           title: 'Messwerte',
           icon: 'poll',
+          widgets: [
+            {
+              type: DashboardWidgetType.numberValue,
+              icon: '',
+              label: 'Test-Wert',
+              valuePath: '',
+              valueFormat: '',
+              datasource: DashboardWidgetDatasource.mqtt,
+              mqttSettings: {
+                server: '192.168.178.25',
+                port: 1883,
+                topic: 'abc',
+              },
+              httpSettings: undefined,
+            },
+            {
+              type: DashboardWidgetType.spacer,
+              icon: '',
+              label: 'Test-String',
+              valuePath: '',
+              valueFormat: '',
+              datasource: DashboardWidgetDatasource.mqtt,
+              mqttSettings: {
+                server: '192.168.178.25',
+                port: 1883,
+                topic: 'abc',
+              },
+              httpSettings: undefined,
+            },
+            {
+              type: DashboardWidgetType.stringValue,
+              icon: '',
+              label: 'Test-String',
+              valuePath: '',
+              valueFormat: '',
+              datasource: DashboardWidgetDatasource.mqtt,
+              mqttSettings: {
+                server: '192.168.178.25',
+                port: 1883,
+                topic: 'abc',
+              },
+              httpSettings: undefined,
+            },
+          ],
         },
         {
           id: 2,
           title: 'Batterien',
           icon: 'battery_std',
+          widgets: [
+            {
+              type: DashboardWidgetType.numberValue,
+              icon: '',
+              label: 'Test-Wert',
+              valuePath: '',
+              valueFormat: '',
+              datasource: DashboardWidgetDatasource.mqtt,
+              mqttSettings: {
+                server: '192.168.178.25',
+                port: 1883,
+                topic: 'abc',
+              },
+              httpSettings: undefined,
+            },
+          ],
         },
         {
           id: 3,
           title: 'Test',
           icon: '',
+          widgets: [
+            {
+              type: DashboardWidgetType.numberValue,
+              icon: '',
+              label: 'Test-Wert',
+              valuePath: '',
+              valueFormat: '',
+              datasource: DashboardWidgetDatasource.mqtt,
+              mqttSettings: {
+                server: '192.168.178.25',
+                port: 1883,
+                topic: 'abc',
+              },
+              httpSettings: undefined,
+            },
+          ],
         },
       ],
     },
@@ -38,6 +116,22 @@ export class DashboardService {
           id: 1,
           title: 'Blub bla',
           icon: 'abc',
+          widgets: [
+            {
+              type: DashboardWidgetType.numberValue,
+              icon: '',
+              label: 'Test-Wert',
+              valuePath: '',
+              valueFormat: '',
+              datasource: DashboardWidgetDatasource.mqtt,
+              mqttSettings: {
+                server: '192.168.178.25',
+                port: 1883,
+                topic: 'abc',
+              },
+              httpSettings: undefined,
+            },
+          ],
         },
       ],
     },

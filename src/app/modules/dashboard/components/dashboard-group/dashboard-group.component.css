@@ -15,4 +15,14 @@ div.groupTitle {
 
 div.groupTitle>span.title {
   margin-left: 0.4rem;
+  text-transform: uppercase;
+}
+
+.widget:not(:last-child) {
+  margin-bottom: 0.4rem;
+}
+
+div.widgets {
+  margin: 0.4rem;
+  margin-top: 0.8rem;
 }
