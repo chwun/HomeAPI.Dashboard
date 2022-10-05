@@ -1,0 +1,10 @@
+div.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+span.label {
+  font-weight: bold;
+}
+
+span.value {}

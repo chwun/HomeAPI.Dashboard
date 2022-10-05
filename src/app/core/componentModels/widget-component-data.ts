@@ -1,3 +1,5 @@
+import { DashboardWidget } from '../models/dashboard-widget';
+
 export interface WidgetComponentData {
-  data: any;
+  widget: DashboardWidget;
 }

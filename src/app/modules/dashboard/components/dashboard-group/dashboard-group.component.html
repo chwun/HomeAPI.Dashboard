@@ -11,8 +11,7 @@
       <app-dashboard-widget-host
         class="widget"
         *ngFor="let widget of group.widgets"
-        [widgetData]="undefined"
-        [widgetType]="widget.type">
+        [widget]="widget">
       </app-dashboard-widget-host>
     </div>
   </div>

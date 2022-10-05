@@ -23,8 +23,6 @@ export class DashboardService {
               type: DashboardWidgetType.numberValue,
               icon: '',
               label: 'Test-Wert',
-              valuePath: '',
-              valueFormat: '',
               datasource: DashboardWidgetDatasource.mqtt,
               mqttSettings: {
                 server: '192.168.178.25',
@@ -32,13 +30,14 @@ export class DashboardService {
                 topic: 'abc',
               },
               httpSettings: undefined,
+              data: {
+                valueFormat: 'abc123',
+              },
             },
             {
               type: DashboardWidgetType.spacer,
               icon: '',
               label: 'Test-String',
-              valuePath: '',
-              valueFormat: '',
               datasource: DashboardWidgetDatasource.mqtt,
               mqttSettings: {
                 server: '192.168.178.25',
@@ -51,8 +50,6 @@ export class DashboardService {
               type: DashboardWidgetType.stringValue,
               icon: '',
               label: 'Test-String',
-              valuePath: '',
-              valueFormat: '',
               datasource: DashboardWidgetDatasource.mqtt,
               mqttSettings: {
                 server: '192.168.178.25',
@@ -72,8 +69,6 @@ export class DashboardService {
               type: DashboardWidgetType.numberValue,
               icon: '',
               label: 'Test-Wert',
-              valuePath: '',
-              valueFormat: '',
               datasource: DashboardWidgetDatasource.mqtt,
               mqttSettings: {
                 server: '192.168.178.25',
@@ -81,6 +76,9 @@ export class DashboardService {
                 topic: 'abc',
               },
               httpSettings: undefined,
+              data: {
+                valueFormat: '{{ value:1}}',
+              },
             },
           ],
         },
@@ -93,8 +91,6 @@ export class DashboardService {
               type: DashboardWidgetType.numberValue,
               icon: '',
               label: 'Test-Wert',
-              valuePath: '',
-              valueFormat: '',
               datasource: DashboardWidgetDatasource.mqtt,
               mqttSettings: {
                 server: '192.168.178.25',
@@ -102,6 +98,9 @@ export class DashboardService {
                 topic: 'abc',
               },
               httpSettings: undefined,
+              data: {
+                valueFormat: '',
+              },
             },
           ],
         },
@@ -121,8 +120,6 @@ export class DashboardService {
               type: DashboardWidgetType.numberValue,
               icon: '',
               label: 'Test-Wert',
-              valuePath: '',
-              valueFormat: '',
               datasource: DashboardWidgetDatasource.mqtt,
               mqttSettings: {
                 server: '192.168.178.25',
@@ -130,6 +127,9 @@ export class DashboardService {
                 topic: 'abc',
               },
               httpSettings: undefined,
+              data: {
+                valueFormat: '',
+              },
             },
           ],
         },

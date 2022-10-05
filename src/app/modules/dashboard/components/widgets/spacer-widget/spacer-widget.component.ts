@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WidgetComponentData } from 'src/app/core/componentModels/widget-component-data';
+import { DashboardWidget } from 'src/app/core/models/dashboard-widget';
 
 @Component({
   selector: 'app-spacer-widget',
@@ -7,7 +8,7 @@ import { WidgetComponentData } from 'src/app/core/componentModels/widget-compone
   styleUrls: ['./spacer-widget.component.css'],
 })
 export class SpacerWidgetComponent implements OnInit, WidgetComponentData {
-  data: any;
+  widget!: DashboardWidget;
 
   constructor() {}
 
