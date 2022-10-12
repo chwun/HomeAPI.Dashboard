@@ -18,6 +18,12 @@
  * BROWSER POLYFILLS
  */
 
+// Add global to window, assigning the value of window itself.
+(window as any).global = window;
+
+global.Buffer = global.Buffer || require('buffer').Buffer;
+global.process = global.process || require('process').Process;
+
 /**
  * By default, zone.js will patch all possible macroTask and DomEvents
  * user can disable parts of macroTask/DomEvents patch by setting following flags
@@ -45,8 +51,7 @@
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
-import 'zone.js';  // Included with Angular CLI.
-
+import 'zone.js'; // Included with Angular CLI.
 
 /***************************************************************************************************
  * APPLICATION IMPORTS

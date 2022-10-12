@@ -1,4 +1,5 @@
 <div class="container">
   <span class="label">{{ widget.label }}</span>
-  <span class="value">{{ formattedValue }}</span>
+  <span class="value" *ngIf="!hasError">{{ formattedValue }}</span>
+  <span class="error" *ngIf="hasError">???</span>
 </div>

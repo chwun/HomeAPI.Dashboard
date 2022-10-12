@@ -19,9 +19,13 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
+    "buffer": "^6.0.3",
     "material-icons": "^1.12.0",
+    "mqtt": "^4.3.7",
+    "process": "^0.11.10",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
+    "url": "^0.11.0",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -34,6 +38,8 @@
     "@angular/cli": "~14.2.4",
     "@angular/compiler-cli": "^14.2.0",
     "@types/jasmine": "~4.0.0",
+    "@types/node": "^18.8.4",
+    "@types/ws": "^8.5.3",
     "@typescript-eslint/eslint-plugin": "5.37.0",
     "@typescript-eslint/parser": "5.37.0",
     "eslint": "^8.23.1",

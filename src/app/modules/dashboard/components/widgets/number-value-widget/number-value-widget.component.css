@@ -8,3 +8,7 @@ span.label {
 }
 
 span.value {}
+
+span.error {
+  color: red;
+}

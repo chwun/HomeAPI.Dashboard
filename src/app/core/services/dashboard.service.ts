@@ -14,52 +14,52 @@ export class DashboardService {
       title: 'Home',
       icon: 'home',
       groups: [
-        {
-          id: 1,
-          title: 'Messwerte',
-          icon: 'poll',
-          widgets: [
-            {
-              type: DashboardWidgetType.numberValue,
-              icon: '',
-              label: 'Test-Wert',
-              datasource: DashboardWidgetDatasource.mqtt,
-              mqttSettings: {
-                server: '192.168.178.25',
-                port: 1883,
-                topic: 'abc',
-              },
-              httpSettings: undefined,
-              data: {
-                valueFormat: 'abc123',
-              },
-            },
-            {
-              type: DashboardWidgetType.spacer,
-              icon: '',
-              label: 'Test-String',
-              datasource: DashboardWidgetDatasource.mqtt,
-              mqttSettings: {
-                server: '192.168.178.25',
-                port: 1883,
-                topic: 'abc',
-              },
-              httpSettings: undefined,
-            },
-            {
-              type: DashboardWidgetType.stringValue,
-              icon: '',
-              label: 'Test-String',
-              datasource: DashboardWidgetDatasource.mqtt,
-              mqttSettings: {
-                server: '192.168.178.25',
-                port: 1883,
-                topic: 'abc',
-              },
-              httpSettings: undefined,
-            },
-          ],
-        },
+        // {
+        //   id: 1,
+        //   title: 'Messwerte',
+        //   icon: 'poll',
+        //   widgets: [
+        //     {
+        //       type: DashboardWidgetType.numberValue,
+        //       icon: '',
+        //       label: 'Test-Wert',
+        //       datasource: DashboardWidgetDatasource.mqtt,
+        //       mqttSettings: {
+        //         server: '192.168.178.25',
+        //         port: 1883,
+        //         topic: 'abc',
+        //       },
+        //       httpSettings: undefined,
+        //       data: {
+        //         valueFormat: 'abc123',
+        //       },
+        //     },
+        //     {
+        //       type: DashboardWidgetType.spacer,
+        //       icon: '',
+        //       label: 'Test-String',
+        //       datasource: DashboardWidgetDatasource.mqtt,
+        //       mqttSettings: {
+        //         server: '192.168.178.25',
+        //         port: 1883,
+        //         topic: 'abc',
+        //       },
+        //       httpSettings: undefined,
+        //     },
+        //     {
+        //       type: DashboardWidgetType.stringValue,
+        //       icon: '',
+        //       label: 'Test-String',
+        //       datasource: DashboardWidgetDatasource.mqtt,
+        //       mqttSettings: {
+        //         server: '192.168.178.25',
+        //         port: 1883,
+        //         topic: 'abc',
+        //       },
+        //       httpSettings: undefined,
+        //     },
+        //   ],
+        // },
         {
           id: 2,
           title: 'Batterien',
@@ -68,12 +68,12 @@ export class DashboardService {
             {
               type: DashboardWidgetType.numberValue,
               icon: '',
-              label: 'Test-Wert',
+              label: 'Bewegungsmelder Flur',
               datasource: DashboardWidgetDatasource.mqtt,
               mqttSettings: {
-                server: '192.168.178.25',
-                port: 1883,
-                topic: 'abc',
+                server: 'ws://192.168.178.25:9001/mqtt',
+                port: 9001,
+                topic: 'dashboard/measurement/batteries/Bewegungsmelder_Flur',
               },
               httpSettings: undefined,
               data: {
@@ -82,28 +82,28 @@ export class DashboardService {
             },
           ],
         },
-        {
-          id: 3,
-          title: 'Test',
-          icon: '',
-          widgets: [
-            {
-              type: DashboardWidgetType.numberValue,
-              icon: '',
-              label: 'Test-Wert',
-              datasource: DashboardWidgetDatasource.mqtt,
-              mqttSettings: {
-                server: '192.168.178.25',
-                port: 1883,
-                topic: 'abc',
-              },
-              httpSettings: undefined,
-              data: {
-                valueFormat: '',
-              },
-            },
-          ],
-        },
+        // {
+        //   id: 3,
+        //   title: 'Test',
+        //   icon: '',
+        //   widgets: [
+        //     {
+        //       type: DashboardWidgetType.numberValue,
+        //       icon: '',
+        //       label: 'Test-Wert',
+        //       datasource: DashboardWidgetDatasource.mqtt,
+        //       mqttSettings: {
+        //         server: '192.168.178.25',
+        //         port: 1883,
+        //         topic: 'abc',
+        //       },
+        //       httpSettings: undefined,
+        //       data: {
+        //         valueFormat: '',
+        //       },
+        //     },
+        //   ],
+        // },
       ],
     },
     {
