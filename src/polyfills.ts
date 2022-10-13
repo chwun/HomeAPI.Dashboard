@@ -22,7 +22,7 @@
 (window as any).global = window;
 
 global.Buffer = global.Buffer || require('buffer').Buffer;
-global.process = global.process || require('process').Process;
+global.process = global.process || require('process');
 
 /**
  * By default, zone.js will patch all possible macroTask and DomEvents
