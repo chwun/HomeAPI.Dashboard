@@ -3,11 +3,11 @@ div.container {
   justify-content: space-between;
 }
 
-span.label {
+span.label {}
+
+span.value {
   font-weight: bold;
 }
-
-span.value {}
 
 span.error {
   color: red;

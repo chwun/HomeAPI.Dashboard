@@ -34,13 +34,14 @@ export abstract class WidgetBaseComponent
         },
         error: () => (this.hasError = true),
       });
+
+    this.onInitCallback();
   }
 
   ngOnDestroy(): void {
-    // TODO: deregister datasource!
-
     this._killSubscriptions$.next();
   }
 
-  abstract onValueChanged(newValue: string): void;
+  abstract onInitCallback(): void;
+  abstract onValueChanged(newValueString: string): void;
 }

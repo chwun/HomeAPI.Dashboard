@@ -8,9 +8,8 @@ import { WidgetBaseComponent } from '../widget-base/widget-base.component';
   templateUrl: './spacer-widget.component.html',
   styleUrls: ['./spacer-widget.component.css'],
 })
-export class SpacerWidgetComponent
-  extends WidgetBaseComponent
-  implements OnInit
-{
-  onValueChanged(newValue: string): void {}
+export class SpacerWidgetComponent extends WidgetBaseComponent {
+  onInitCallback(): void {}
+
+  onValueChanged(newValueString: string): void {}
 }

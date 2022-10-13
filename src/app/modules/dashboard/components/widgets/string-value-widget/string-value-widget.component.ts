@@ -8,11 +8,10 @@ import { WidgetBaseComponent } from '../widget-base/widget-base.component';
   templateUrl: './string-value-widget.component.html',
   styleUrls: ['./string-value-widget.component.css'],
 })
-export class StringValueWidgetComponent
-  extends WidgetBaseComponent
-  implements OnInit
-{
-  override ngOnInit(): void {}
+export class StringValueWidgetComponent extends WidgetBaseComponent {
+  onInitCallback(): void {
+    // this._data = this.widget.data as NumberValueData;
+  }
 
-  onValueChanged(newValue: string): void {}
+  onValueChanged(newValueString: string): void {}
 }

@@ -71,39 +71,77 @@ export class DashboardService {
               label: 'Bewegungsmelder Flur',
               datasource: DashboardWidgetDatasource.mqtt,
               mqttSettings: {
-                server: 'ws://192.168.178.25:9001/mqtt',
+                server: 'ws://192.168.178.25',
                 port: 9001,
                 topic: 'dashboard/measurement/batteries/Bewegungsmelder_Flur',
               },
               httpSettings: undefined,
               data: {
-                valueFormat: '{{ value:1}}',
+                valueFormat: '{{ payload }} %',
+              },
+            },
+            {
+              type: DashboardWidgetType.numberValue,
+              icon: '',
+              label: 'Bewegungsmelder Küche',
+              datasource: DashboardWidgetDatasource.mqtt,
+              mqttSettings: {
+                server: 'ws://192.168.178.25',
+                port: 9001,
+                topic: 'dashboard/measurement/batteries/Bewegungsmelder_Kueche',
+              },
+              httpSettings: undefined,
+              data: {
+                valueFormat: '{{ payload }} %',
+              },
+            },
+            {
+              type: DashboardWidgetType.numberValue,
+              icon: '',
+              label: 'Sensor Esszimmer',
+              datasource: DashboardWidgetDatasource.mqtt,
+              mqttSettings: {
+                server: 'ws://192.168.178.25',
+                port: 9001,
+                topic: 'dashboard/measurement/batteries/Sensor_Esszimmer',
+              },
+              httpSettings: undefined,
+              data: {
+                valueFormat: '{{ payload }} %',
+              },
+            },
+            {
+              type: DashboardWidgetType.numberValue,
+              icon: '',
+              label: 'Steuerung Dimmer',
+              datasource: DashboardWidgetDatasource.mqtt,
+              mqttSettings: {
+                server: 'ws://192.168.178.25',
+                port: 9001,
+                topic: 'dashboard/measurement/batteries/Steuerung_Dimmer',
+              },
+              httpSettings: undefined,
+              data: {
+                valueFormat: '{{ payload }} %',
+              },
+            },
+            {
+              type: DashboardWidgetType.numberValue,
+              icon: '',
+              label: 'Steuerung Remote',
+              datasource: DashboardWidgetDatasource.mqtt,
+              mqttSettings: {
+                server: 'ws://192.168.178.25',
+                port: 9001,
+                topic: 'dashboard/measurement/batteries/Steuerung_Remote',
+              },
+              httpSettings: undefined,
+              data: {
+                valueFormat: '{{ payload }} %',
               },
             },
           ],
         },
-        // {
-        //   id: 3,
-        //   title: 'Test',
-        //   icon: '',
-        //   widgets: [
-        //     {
-        //       type: DashboardWidgetType.numberValue,
-        //       icon: '',
-        //       label: 'Test-Wert',
-        //       datasource: DashboardWidgetDatasource.mqtt,
-        //       mqttSettings: {
-        //         server: '192.168.178.25',
-        //         port: 1883,
-        //         topic: 'abc',
-        //       },
-        //       httpSettings: undefined,
-        //       data: {
-        //         valueFormat: '',
-        //       },
-        //     },
-        //   ],
-        // },
       ],
     },
     {
