@@ -75,7 +75,7 @@ export class NumberValueWidgetComponent extends WidgetBaseComponent {
     placeholder: string
   ): [valuePath: string, formatString: string] {
     const regex =
-      /\{\{\s*(?<valuePath>[a-zA-Z\.\[\]0-9]+)(:(?<formatString>[0-9]+(\.[0-9]+(-[0-9]+)?)?))?\s*\}\}/g;
+      /\{\{\s*(?<valuePath>[a-zA-Z\.\[\]0-9]+)(:(?<formatString>[0-9]+(\.[0-9]+(-[0-9]+))))?\s*\}\}/g;
     const matches = [...placeholder.matchAll(regex)];
 
     const matchGroups = matches[0]?.groups;
