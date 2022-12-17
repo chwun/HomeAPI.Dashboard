@@ -10,7 +10,6 @@ import { DashboardWidgetHostComponent } from './components/dashboard-widget-host
 import { NumberValueWidgetComponent } from './components/widgets/number-value-widget/number-value-widget.component';
 import { StringValueWidgetComponent } from './components/widgets/string-value-widget/string-value-widget.component';
 import { SpacerWidgetComponent } from './components/widgets/spacer-widget/spacer-widget.component';
-import { WidgetBaseComponent } from './components/widgets/widget-base/widget-base.component';
 
 @NgModule({
   declarations: [
