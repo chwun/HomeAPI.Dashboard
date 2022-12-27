@@ -7,7 +7,8 @@ import { DashboardConfig } from '../models/dashboard-config';
   providedIn: 'root',
 })
 export class DashboardService {
-  private _dashboardConfigUrl = 'http://192.168.178.25:9500/static/';
+  private _dashboardConfigUrl =
+    'http://192.168.178.25:9500/static/home-dashboard-config.json';
 
   constructor(private http: HttpClient) {}
 

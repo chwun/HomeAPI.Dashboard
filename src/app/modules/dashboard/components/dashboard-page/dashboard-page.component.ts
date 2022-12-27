@@ -13,8 +13,7 @@ import { DashboardService } from 'src/app/core/services/dashboard.service';
 export class DashboardPageComponent implements OnInit {
   page: DashboardPage | undefined;
 
-  @Input()
-  config: DashboardConfig | undefined;
+  private pageId: number | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -22,10 +21,16 @@ export class DashboardPageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.queryParamMap.subscribe((queryParamMap) => {
-      const pageIdParsed = Number(queryParamMap.get('page'));
-      const pageId = !Number.isNaN(pageIdParsed) ? pageIdParsed : 0;
-      this.page = this.config?.pages?.find((x) => x.id === pageId);
-    });
+    this.route.queryParamMap
+      .pipe(
+        switchMap((queryParamMap) => {
+          const pageIdParsed = Number(queryParamMap.get('page'));
+          this.pageId = !Number.isNaN(pageIdParsed) ? pageIdParsed : 0;
+          return this.dashboardService.getDashboardConfig();
+        })
+      )
+      .subscribe((config) => {
+        this.page = config?.pages?.find((x) => x.id === this.pageId);
+      });
   }
 }

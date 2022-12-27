@@ -1,5 +1,5 @@
 export enum DashboardWidgetType {
-  'numberValue',
-  'stringValue',
-  'spacer',
+  numberValue = 'numberValue',
+  stringValue = 'stringValue',
+  spacer = 'spacer',
 }

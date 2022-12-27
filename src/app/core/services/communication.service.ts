@@ -103,7 +103,7 @@ export class CommunicationService implements OnDestroy {
         client.subscribe(topic);
       });
       client.on('message', (messageTopic: string, payload: Buffer, _) => {
-        if (messageTopic.toLowerCase() == topic.toLowerCase()) {
+        if (messageTopic.toLowerCase() === topic.toLowerCase()) {
           $newSubj.next(payload.toString());
         }
       });

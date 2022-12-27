@@ -10,6 +10,7 @@ div.pageHeader {
   align-items: center;
   padding: 1rem;
   background-color: rgb(96, 125, 139);
+  column-gap: 1rem;
 }
 
 div.pageContent {

@@ -71,7 +71,7 @@ export class NumberValueWidgetComponent extends WidgetBaseComponent {
     }
   }
 
-  parseValuePathAndFormatString(
+  private parseValuePathAndFormatString(
     placeholder: string
   ): [valuePath: string, formatString: string] {
     const regex =

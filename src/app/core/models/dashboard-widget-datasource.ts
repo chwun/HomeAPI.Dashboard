@@ -1,4 +1,4 @@
 export enum DashboardWidgetDatasource {
-  'mqtt',
-  'http',
+  mqtt = 'mqtt',
+  http = 'http',
 }
