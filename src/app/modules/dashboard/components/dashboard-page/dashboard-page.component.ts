@@ -25,7 +25,8 @@ export class DashboardPageComponent implements OnInit {
       .pipe(
         switchMap((queryParamMap) => {
           const pageIdParsed = Number(queryParamMap.get('page'));
-          this.pageId = !Number.isNaN(pageIdParsed) ? pageIdParsed : 0;
+          this.pageId =
+            !Number.isNaN(pageIdParsed) && pageIdParsed > 0 ? pageIdParsed : 1;
           return this.dashboardService.getDashboardConfig();
         })
       )

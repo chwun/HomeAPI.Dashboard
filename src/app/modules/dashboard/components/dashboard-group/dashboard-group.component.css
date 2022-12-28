@@ -11,10 +11,10 @@ div.groupTitle {
   min-height: 32px;
   border-bottom: 2px solid rgb(48, 48, 48);
   padding-bottom: 5px;
+  column-gap: 0.4rem;
 }
 
 div.groupTitle>span.title {
-  margin-left: 0.4rem;
   text-transform: uppercase;
 }
 
