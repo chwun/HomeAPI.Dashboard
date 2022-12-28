@@ -11,9 +11,8 @@ import { DashboardService } from 'src/app/core/services/dashboard.service';
   styleUrls: ['./dashboard-page.component.css'],
 })
 export class DashboardPageComponent implements OnInit {
-  page: DashboardPage | undefined;
-
-  private pageId: number | undefined;
+  page: DashboardPage | undefined | null;
+  pageId: number | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -31,7 +30,7 @@ export class DashboardPageComponent implements OnInit {
         })
       )
       .subscribe((config) => {
-        this.page = config?.pages?.find((x) => x.id === this.pageId);
+        this.page = config?.pages?.find((x) => x.id === this.pageId) ?? null;
       });
   }
 }
