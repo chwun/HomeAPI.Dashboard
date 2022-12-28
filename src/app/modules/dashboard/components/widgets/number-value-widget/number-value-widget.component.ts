@@ -41,7 +41,7 @@ export class NumberValueWidgetComponent extends WidgetBaseComponent {
       );
       const formattedValue = formatNumber(
         value,
-        'de',
+        'en-US',
         replacement.formatString
       );
       formattedValueString = formattedValueString.replace(
