@@ -9,7 +9,7 @@ div.pageHeader {
   display: flex;
   align-items: center;
   padding: 1rem;
-  background-color: var(--accent-color);
+  background-color: var(--primary-color);
   column-gap: 0.5rem;
 }
 

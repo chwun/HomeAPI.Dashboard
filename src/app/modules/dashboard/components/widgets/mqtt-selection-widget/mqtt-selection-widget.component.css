@@ -8,6 +8,7 @@ a.item {
   background-color: var(--secondary-color);
   padding: 0.45rem;
   cursor: pointer;
+  user-select: none;
 }
 
 a.item:hover, a.item:active, a.item.activeItem {
