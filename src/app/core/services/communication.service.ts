@@ -45,6 +45,29 @@ export class CommunicationService implements OnDestroy {
     }
   }
 
+  publishMqttMessage(
+    settings: DashboardWidgetMqttSettings | undefined,
+    topic: string,
+    message: string
+  ) {
+    if (!settings) {
+      return;
+    }
+
+    // TODO: temp solution, should get cached client instead!
+    try {
+      const client = this.createMqttClient(settings.server, settings.port);
+      client.on('connect', () => {
+        client.subscribe(topic, (err) => {
+          client.publish(topic, message);
+          client.end();
+        });
+      });
+    } catch (error: any) {
+      console.error(error);
+    }
+  }
+
   private registerMqttDatasource(
     settings: DashboardWidgetMqttSettings | undefined
   ): Observable<string> {

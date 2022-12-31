@@ -7,9 +7,7 @@
   </div>
 
   <div class="pageContent" *ngIf="page">
-    <app-dashboard-group
-      *ngFor="let group of page.groups"
-      [group]="group"></app-dashboard-group>
+    <app-dashboard-group *ngFor="let group of page.groups" [group]="group"></app-dashboard-group>
   </div>
 
   <div class="pageContent" *ngIf="page === null">

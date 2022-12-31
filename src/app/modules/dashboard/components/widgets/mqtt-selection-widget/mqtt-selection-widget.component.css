@@ -1,0 +1,15 @@
+.items {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 0.3rem;
+}
+
+a.item {
+  background-color: var(--secondary-color);
+  padding: 0.45rem;
+  cursor: pointer;
+}
+
+a.item:hover, a.item:active, a.item.activeItem {
+  background-color: var(--secondary-accent-color);
+}

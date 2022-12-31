@@ -1,5 +1,5 @@
 div.group {
-  background-color: rgb(66, 66, 66);
+  background-color: var(--background-accent-color);
   padding: 0.5rem;
   width: 300px;
 }
@@ -9,7 +9,7 @@ div.groupTitle {
   flex-flow: row nowrap;
   align-items: center;
   min-height: 32px;
-  border-bottom: 2px solid rgb(48, 48, 48);
+  border-bottom: 2px solid var(--background-color);
   padding-bottom: 5px;
   column-gap: 0.4rem;
 }

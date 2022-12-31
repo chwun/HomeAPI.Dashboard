@@ -10,6 +10,7 @@ import { DashboardWidgetHostComponent } from './components/dashboard-widget-host
 import { NumberValueWidgetComponent } from './components/widgets/number-value-widget/number-value-widget.component';
 import { StringValueWidgetComponent } from './components/widgets/string-value-widget/string-value-widget.component';
 import { SpacerWidgetComponent } from './components/widgets/spacer-widget/spacer-widget.component';
+import { MqttSelectionWidgetComponent } from './components/widgets/mqtt-selection-widget/mqtt-selection-widget.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SpacerWidgetComponent } from './components/widgets/spacer-widget/spacer
     NumberValueWidgetComponent,
     StringValueWidgetComponent,
     SpacerWidgetComponent,
+    MqttSelectionWidgetComponent,
   ],
   imports: [SharedModule, DashboardRoutingModule],
 })

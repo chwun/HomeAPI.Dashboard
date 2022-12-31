@@ -1,4 +1,5 @@
 import { Injectable, Type } from '@angular/core';
+import { MqttSelectionWidgetComponent } from 'src/app/modules/dashboard/components/widgets/mqtt-selection-widget/mqtt-selection-widget.component';
 import { NumberValueWidgetComponent } from 'src/app/modules/dashboard/components/widgets/number-value-widget/number-value-widget.component';
 import { SpacerWidgetComponent } from 'src/app/modules/dashboard/components/widgets/spacer-widget/spacer-widget.component';
 import { StringValueWidgetComponent } from 'src/app/modules/dashboard/components/widgets/string-value-widget/string-value-widget.component';
@@ -23,6 +24,9 @@ export class WidgetComponentResolverService {
 
       case DashboardWidgetType.spacer:
         return SpacerWidgetComponent;
+
+      case DashboardWidgetType.mqttSelection:
+        return MqttSelectionWidgetComponent;
 
       default:
         return null;
