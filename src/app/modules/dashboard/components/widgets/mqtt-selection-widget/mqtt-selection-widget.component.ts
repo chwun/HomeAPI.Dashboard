@@ -28,6 +28,10 @@ export class MqttSelectionWidgetComponent extends WidgetBaseComponent {
   }
 
   selectItem(item: MqttSelectionItem) {
-    this.publishMqttMessage(this.widget.mqttSettings?.topic ?? '', item.value);
+    this.publishMqttMessage(
+      this.widget.mqttSettings?.topic ?? '',
+      item.value,
+      true
+    );
   }
 }

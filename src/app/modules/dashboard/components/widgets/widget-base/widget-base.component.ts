@@ -45,11 +45,12 @@ export abstract class WidgetBaseComponent
   abstract onInitCallback(): void;
   abstract onValueChanged(newValueString: string): void;
 
-  publishMqttMessage(topic: string, message: string) {
+  publishMqttMessage(topic: string, message: string, retain: boolean) {
     this.communication.publishMqttMessage(
       this.widget.mqttSettings,
       topic,
-      message
+      message,
+      retain
     );
   }
 }

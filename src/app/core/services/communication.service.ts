@@ -48,7 +48,8 @@ export class CommunicationService implements OnDestroy {
   publishMqttMessage(
     settings: DashboardWidgetMqttSettings | undefined,
     topic: string,
-    message: string
+    message: string,
+    retain: boolean
   ) {
     if (!settings) {
       return;
@@ -59,7 +60,7 @@ export class CommunicationService implements OnDestroy {
       const client = this.createMqttClient(settings.server, settings.port);
       client.on('connect', () => {
         client.subscribe(topic, (err) => {
-          client.publish(topic, message);
+          client.publish(topic, message, { retain: retain });
           client.end();
         });
       });
