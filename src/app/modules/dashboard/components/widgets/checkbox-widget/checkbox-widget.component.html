@@ -1,0 +1,5 @@
+<a class="item" (click)="toggle()">
+  <span>{{ widget.label }}</span>
+  <span *ngIf="value" class="material-symbols-outlined checkbox">check_box</span>
+  <span *ngIf="!value" class="material-symbols-outlined checkbox">check_box_outline_blank</span>
+</a>

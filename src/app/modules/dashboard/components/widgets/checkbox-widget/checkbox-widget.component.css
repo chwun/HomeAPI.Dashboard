@@ -1,21 +1,19 @@
-.items {
-  display: flex;
-  flex-flow: column nowrap;
-  row-gap: 0.3rem;
-}
-
 a.item {
-  align-items: center;
-  height: 2.2rem;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: var(--secondary-color);
   padding: 0.45rem;
   cursor: pointer;
   user-select: none;
+  height: 2.2rem;
 }
 
 a.item:hover,
-a.item:active,
-a.item.activeItem {
+a.item:active {
   background-color: var(--secondary-accent-color);
+}
+
+span.checkbox {
+  font-size: 1.5rem;
 }

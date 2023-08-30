@@ -3,4 +3,5 @@ export enum DashboardWidgetType {
   stringValue = 'stringValue',
   spacer = 'spacer',
   mqttSelection = 'mqttSelection',
+  checkbox = 'checkbox',
 }

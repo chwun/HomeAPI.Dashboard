@@ -11,6 +11,7 @@ import { NumberValueWidgetComponent } from './components/widgets/number-value-wi
 import { StringValueWidgetComponent } from './components/widgets/string-value-widget/string-value-widget.component';
 import { SpacerWidgetComponent } from './components/widgets/spacer-widget/spacer-widget.component';
 import { MqttSelectionWidgetComponent } from './components/widgets/mqtt-selection-widget/mqtt-selection-widget.component';
+import { CheckboxWidgetComponent } from './components/widgets/checkbox-widget/checkbox-widget.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { MqttSelectionWidgetComponent } from './components/widgets/mqtt-selectio
     StringValueWidgetComponent,
     SpacerWidgetComponent,
     MqttSelectionWidgetComponent,
+    CheckboxWidgetComponent,
   ],
   imports: [SharedModule, DashboardRoutingModule],
 })

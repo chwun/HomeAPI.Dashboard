@@ -5,6 +5,7 @@ import { SpacerWidgetComponent } from 'src/app/modules/dashboard/components/widg
 import { StringValueWidgetComponent } from 'src/app/modules/dashboard/components/widgets/string-value-widget/string-value-widget.component';
 import { WidgetComponentData } from '../componentModels/widget-component-data';
 import { DashboardWidgetType } from '../models/dashboard-widget-type';
+import { CheckboxWidgetComponent } from 'src/app/modules/dashboard/components/widgets/checkbox-widget/checkbox-widget.component';
 
 @Injectable({
   providedIn: 'root',
@@ -27,6 +28,9 @@ export class WidgetComponentResolverService {
 
       case DashboardWidgetType.mqttSelection:
         return MqttSelectionWidgetComponent;
+
+      case DashboardWidgetType.checkbox:
+        return CheckboxWidgetComponent;
 
       default:
         return null;
