@@ -1,5 +1,5 @@
 import { formatNumber } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NumberValueData } from 'src/app/core/models/data/number-value-data';
 import { WidgetBaseComponent } from '../widget-base/widget-base.component';
 
@@ -18,7 +18,8 @@ export class NumberValueWidgetComponent extends WidgetBaseComponent {
   private _data!: NumberValueData;
   private _replacements: ValueFormatReplacement[] = [];
 
-  formattedValueString: string = '';
+  formattedValueString = '';
+  valueColor = 'inherit';
 
   onInitCallback(): void {
     this._data = (this.widget.data as NumberValueData) ?? { valueFormat: '' };
@@ -35,6 +36,8 @@ export class NumberValueWidgetComponent extends WidgetBaseComponent {
 
     let formattedValueString = this._data.valueFormat;
 
+    let lastValue = 0;
+
     for (const replacement of this._replacements) {
       const value = Number(
         this.resolvePayloadPropertyValue(newValueObj, replacement.valuePath)
@@ -48,13 +51,16 @@ export class NumberValueWidgetComponent extends WidgetBaseComponent {
         replacement.placeholder,
         formattedValue
       );
+
+      lastValue = value;
     }
 
     this.formattedValueString = formattedValueString;
+    this.valueColor = this.resolveValueColor(lastValue); // use last parsed value for color assignment
   }
 
   private parseValueFormat(): void {
-    const regex = /(\{\{[^\{\}]+\}\})+/g;
+    const regex = /(\{\{[^{}]+\}\})+/g;
     const matches = [...this._data.valueFormat.matchAll(regex)];
     for (const match of matches) {
       const placeholder = match[1];
@@ -75,7 +81,7 @@ export class NumberValueWidgetComponent extends WidgetBaseComponent {
     placeholder: string
   ): [valuePath: string, formatString: string] {
     const regex =
-      /\{\{\s*(?<valuePath>[a-zA-Z\.\[\]0-9]+)(:(?<formatString>[0-9]+(\.[0-9]+(-[0-9]+))))?\s*\}\}/g;
+      /\{\{\s*(?<valuePath>[a-zA-Z.[\]0-9]+)(:(?<formatString>[0-9]+(\.[0-9]+(-[0-9]+))))?\s*\}\}/g;
     const matches = [...placeholder.matchAll(regex)];
 
     const matchGroups = matches[0]?.groups;
@@ -102,5 +108,41 @@ export class NumberValueWidgetComponent extends WidgetBaseComponent {
 
     const properties = valuePath.split('.');
     return properties.reduce((prev, curr) => prev?.[curr], payload);
+  }
+
+  private resolveValueColor(value: number): string {
+    let color = 'inherit';
+
+    if (!this._data.colorConditions) {
+      return color;
+    }
+
+    for (const condition of this._data.colorConditions) {
+      let conditionSuccessful = false;
+
+      switch (condition.condition) {
+        case 'eq':
+          conditionSuccessful = value === condition.value;
+          break;
+        case 'l':
+          conditionSuccessful = value < condition.value;
+          break;
+        case 'leq':
+          conditionSuccessful = value <= condition.value;
+          break;
+        case 'g':
+          conditionSuccessful = value > condition.value;
+          break;
+        case 'geq':
+          conditionSuccessful = value >= condition.value;
+          break;
+      }
+
+      if (conditionSuccessful) {
+        color = condition.color;
+      }
+    }
+
+    return color;
   }
 }

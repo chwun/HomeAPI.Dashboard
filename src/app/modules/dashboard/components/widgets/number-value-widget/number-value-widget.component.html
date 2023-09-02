@@ -1,5 +1,5 @@
 <div class="container">
   <span class="label">{{ widget.label }}</span>
-  <span class="value" *ngIf="!hasError">{{ formattedValueString }}</span>
+  <span class="value" *ngIf="!hasError" [ngStyle]="{'color': valueColor}">{{ formattedValueString }}</span>
   <span class="error" *ngIf="hasError">???</span>
 </div>
