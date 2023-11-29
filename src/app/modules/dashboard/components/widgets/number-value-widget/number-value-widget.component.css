@@ -3,10 +3,12 @@ div.container {
   justify-content: space-between;
 }
 
-span.label {}
+span.label {
+}
 
 span.value {
-  font-weight: bold;
+  font-family: 'Noto Sans Mono', monospace;
+  font-size: 0.85rem;
 }
 
 span.error {
