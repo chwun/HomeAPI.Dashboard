@@ -9,6 +9,7 @@ span.label {
 span.value {
   font-family: 'Noto Sans Mono', monospace;
   font-size: 0.85rem;
+  white-space: pre;
 }
 
 span.error {
