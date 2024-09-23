@@ -12,6 +12,7 @@ import { StringValueWidgetComponent } from './components/widgets/string-value-wi
 import { SpacerWidgetComponent } from './components/widgets/spacer-widget/spacer-widget.component';
 import { MqttSelectionWidgetComponent } from './components/widgets/mqtt-selection-widget/mqtt-selection-widget.component';
 import { CheckboxWidgetComponent } from './components/widgets/checkbox-widget/checkbox-widget.component';
+import { TvRemoteComponent } from './components/widgets/tv-remote/tv-remote.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { CheckboxWidgetComponent } from './components/widgets/checkbox-widget/ch
     SpacerWidgetComponent,
     MqttSelectionWidgetComponent,
     CheckboxWidgetComponent,
+    TvRemoteComponent,
   ],
   imports: [SharedModule, DashboardRoutingModule],
 })

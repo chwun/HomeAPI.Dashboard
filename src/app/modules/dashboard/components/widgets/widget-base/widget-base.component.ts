@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { WidgetComponentData } from 'src/app/core/componentModels/widget-component-data';
@@ -17,7 +18,10 @@ export abstract class WidgetBaseComponent
 
   private _killSubscriptions$ = new Subject<void>();
 
-  constructor(protected communication: CommunicationService) {}
+  constructor(
+    protected communication: CommunicationService,
+    protected httpClient: HttpClient
+  ) {}
 
   ngOnInit(): void {
     this.communication

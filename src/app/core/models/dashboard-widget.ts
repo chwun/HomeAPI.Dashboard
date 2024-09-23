@@ -4,6 +4,7 @@ import { DashboardWidgetMqttSettings } from './dashboard-widget-mqtt-settings';
 import { DashboardWidgetType } from './dashboard-widget-type';
 import { MqttSelectionData } from './data/mqtt-selection-data';
 import { NumberValueData } from './data/number-value-data';
+import { TvRemoteData } from './data/tv-remote-data';
 
 export interface DashboardWidget {
   type: DashboardWidgetType;
@@ -12,5 +13,5 @@ export interface DashboardWidget {
   datasource: DashboardWidgetDatasource;
   mqttSettings: DashboardWidgetMqttSettings | undefined;
   httpSettings: DashboardWidgetHttpSettings | undefined;
-  data?: NumberValueData | MqttSelectionData | undefined;
+  data?: NumberValueData | MqttSelectionData | TvRemoteData | undefined;
 }

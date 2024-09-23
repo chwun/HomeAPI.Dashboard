@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="doubleButtons">
+    <a (click)="sendPowerOff()">0</a>
+    <a (click)="sendPowerOn()">1</a>
+  </div>
+
+  <div class="doubleButtons">
+    <a (click)="sendHome()">
+      <span class="material-symbols-outlined">apps</span>
+    </a>
+    <a (click)="sendSource()">
+      <span class="material-symbols-outlined">list</span>
+    </a>
+  </div>
+
+  <div class="navigation">
+    <a (click)="sendBack()">
+      <span class="material-symbols-outlined">keyboard_backspace</span>
+    </a>
+    <a (click)="sendUp()">
+      <span class="material-symbols-outlined">keyboard_arrow_up</span>
+    </a>
+    <span>&nbsp;</span>
+
+    <a (click)="sendLeft()">
+      <span class="material-symbols-outlined">keyboard_arrow_left</span>
+    </a>
+    <a (click)="sendOk()">
+      <span class="material-symbols-outlined">check_circle</span>
+    </a>
+    <a (click)="sendRight()">
+      <span class="material-symbols-outlined">keyboard_arrow_right</span>
+    </a>
+
+    <span></span>
+    <a (click)="sendDown()">
+      <span class="material-symbols-outlined">keyboard_arrow_down</span>
+    </a>
+    <span></span>
+  </div>
+
+</div>

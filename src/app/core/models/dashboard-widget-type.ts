@@ -4,4 +4,5 @@ export enum DashboardWidgetType {
   spacer = 'spacer',
   mqttSelection = 'mqttSelection',
   checkbox = 'checkbox',
+  tvRemote = 'tvRemote'
 }

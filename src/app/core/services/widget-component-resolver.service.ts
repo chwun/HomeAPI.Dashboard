@@ -6,13 +6,12 @@ import { StringValueWidgetComponent } from 'src/app/modules/dashboard/components
 import { WidgetComponentData } from '../componentModels/widget-component-data';
 import { DashboardWidgetType } from '../models/dashboard-widget-type';
 import { CheckboxWidgetComponent } from 'src/app/modules/dashboard/components/widgets/checkbox-widget/checkbox-widget.component';
+import { TvRemoteComponent } from 'src/app/modules/dashboard/components/widgets/tv-remote/tv-remote.component';
 
 @Injectable({
   providedIn: 'root',
 })
 export class WidgetComponentResolverService {
-  constructor() {}
-
   resolveComponent(
     type: DashboardWidgetType
   ): Type<WidgetComponentData> | null {
@@ -31,6 +30,9 @@ export class WidgetComponentResolverService {
 
       case DashboardWidgetType.checkbox:
         return CheckboxWidgetComponent;
+
+      case DashboardWidgetType.tvRemote:
+        return TvRemoteComponent;
 
       default:
         return null;
