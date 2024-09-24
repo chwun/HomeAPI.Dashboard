@@ -1,7 +1,7 @@
 div.container {
   display: flex;
   flex-flow: column;
-  row-gap: 0.75rem;
+  row-gap: 0.9rem;
 }
 
 div.doubleButtons {
@@ -21,8 +21,7 @@ a {
   justify-content: center;
 }
 
-a:hover,
-a:active {
+a:hover {
   background-color: var(--secondary-accent-color);
 }
 
@@ -31,4 +30,18 @@ div.navigation {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 5px;
+}
+
+div.navigation > a {
+  height: 3rem;
+}
+
+a.backButton,
+a.homeButton {
+  background-color: var(--tertiary-color);
+}
+
+a.backButton:hover,
+a.homeButton:hover {
+  background-color: var(--tertiary-accent-color);
 }

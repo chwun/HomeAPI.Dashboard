@@ -1,7 +1,9 @@
 :root {
   --background-color: rgb(48, 48, 48);
   --background-accent-color: rgb(66, 66, 66);
-  --primary-color: #607D8B;
-  --secondary-color: #6A9D80;
-  --secondary-accent-color: #2B6946;
+  --primary-color: #607d8b;
+  --secondary-color: #6a9d80;
+  --secondary-accent-color: #2b6946;
+  --tertiary-color: #6e534a;
+  --tertiary-accent-color: #9d776a;
 }

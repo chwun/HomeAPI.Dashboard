@@ -42,6 +42,10 @@ export class TvRemoteComponent extends WidgetBaseComponent {
     this.sendCommand(this._data.routes.source);
   }
 
+  sendSettings() {
+    this.sendCommand(this._data.routes.settings);
+  }
+
   sendBack() {
     this.sendCommand(this._data.routes.back);
   }
@@ -64,6 +68,14 @@ export class TvRemoteComponent extends WidgetBaseComponent {
 
   sendRight() {
     this.sendCommand(this._data.routes.right);
+  }
+
+  sendPause() {
+    this.sendCommand(this._data.routes.pause);
+  }
+
+  sendPlay() {
+    this.sendCommand(this._data.routes.play);
   }
 
   private sendCommand(route: string) {

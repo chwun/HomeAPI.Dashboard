@@ -1,22 +1,20 @@
 <div class="container">
   <div class="doubleButtons">
-    <a (click)="sendPowerOff()">0</a>
-    <a (click)="sendPowerOn()">1</a>
+    <a (click)="sendPowerOff()">OFF</a>
+    <a (click)="sendPowerOn()">ON</a>
   </div>
 
   <div class="doubleButtons">
-    <a (click)="sendHome()">
-      <span class="material-symbols-outlined">apps</span>
-    </a>
     <a (click)="sendSource()">
       <span class="material-symbols-outlined">list</span>
+    </a>
+    <a (click)="sendSettings()">
+      <span class="material-symbols-outlined">settings</span>
     </a>
   </div>
 
   <div class="navigation">
-    <a (click)="sendBack()">
-      <span class="material-symbols-outlined">keyboard_backspace</span>
-    </a>
+    <span>&nbsp;</span>
     <a (click)="sendUp()">
       <span class="material-symbols-outlined">keyboard_arrow_up</span>
     </a>
@@ -32,11 +30,26 @@
       <span class="material-symbols-outlined">keyboard_arrow_right</span>
     </a>
 
-    <span></span>
+
+    <a class="backButton" (click)="sendBack()">
+      <span class="material-symbols-outlined">keyboard_backspace</span>
+    </a>
     <a (click)="sendDown()">
       <span class="material-symbols-outlined">keyboard_arrow_down</span>
     </a>
-    <span></span>
+    <a class="homeButton" (click)="sendHome()">
+      <span class="material-symbols-outlined">home</span>
+    </a>
+  </div>
+
+
+  <div class="doubleButtons">
+    <a (click)="sendPause()">
+      <span class="material-symbols-outlined">pause_circle</span>
+    </a>
+    <a (click)="sendPlay()">
+      <span class="material-symbols-outlined">play_circle</span>
+    </a>
   </div>
 
 </div>
